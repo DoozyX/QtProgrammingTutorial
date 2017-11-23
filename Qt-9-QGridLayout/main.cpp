@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
     layout->addWidget(name1, 1, 1);
 
     QPushButton *btn = new QPushButton("OK");
-    layout->addWidget(btn, 2,0,1,2);
+    layout->addWidget(btn, 2, 0, 1, 2);
 
     window->show();
     return app.exec();

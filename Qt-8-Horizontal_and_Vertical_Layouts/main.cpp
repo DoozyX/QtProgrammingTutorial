@@ -9,12 +9,10 @@ int main(int argc, char*argv[]) {
     QWidget *window = new QWidget();
     window->setWindowTitle("Doozy");
 
-
     QPushButton *btn1 = new QPushButton("Doozy1");
     QPushButton *btn2 = new QPushButton("Doozy2");
     QPushButton *btn3 = new QPushButton("Doozy3");
 
-<<<<<<< HEAD
     //QVBoxLayout *vLayout = new QVBoxLayout();
     QHBoxLayout *hLayout = new QHBoxLayout();
 
@@ -28,15 +26,6 @@ int main(int argc, char*argv[]) {
 
     //window->setLayout(vLayout);
     window->setLayout(hLayout);
-=======
-    QVBoxLayout *vLayout = new QVBoxLayout();
-
-    vLayout->addWidget(btn1);
-    vLayout->addWidget(btn2);
-    vLayout->addWidget(btn3);
-
-    window->setLayout(vLayout);
->>>>>>> 0d1f18230948a8a19ec4fefed6a6a89a9bfc4346
 
     window->show();
     return app.exec();

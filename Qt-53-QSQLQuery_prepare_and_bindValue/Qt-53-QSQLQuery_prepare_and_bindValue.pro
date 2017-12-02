@@ -1,9 +1,10 @@
 QT += core
 QT -= gui
 QT += sql
+
 CONFIG += c++11
 
-TARGET = Qt-52-Basic_SQL_Query_with_Qt
+TARGET = Qt-53-QSQLQuery_prepare_and_bindValue
 CONFIG += console
 CONFIG -= app_bundle
 

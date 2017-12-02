@@ -7,7 +7,6 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
     db = QSqlDatabase::addDatabase("QODBC");
     db.setHostName("DOOZY");
     db.setDatabaseName("mydsn32");
@@ -15,8 +14,10 @@ Dialog::Dialog(QWidget *parent) :
     if(db.open()) {
         qDebug() << "OK";
 
-        model = new QSqlQueryModel();
-        model->setQuery("SELECT * FROM People");
+        model = new QSqlTableModel(this);
+        model->setTable("People");
+        model->select();
+
         if (model->lastError().isValid()) {
               qDebug() << model->lastError();
         }
@@ -24,8 +25,6 @@ Dialog::Dialog(QWidget *parent) :
     } else {
         qDebug() << "ERROR = " << db.lastError();
     }
-
-
 }
 
 Dialog::~Dialog()

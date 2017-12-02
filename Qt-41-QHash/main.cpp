@@ -6,6 +6,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
+    //wrong description of hash in tutorial
     QHash<QString, QString> map;
 
     map.insert("Doozy", "Hello");

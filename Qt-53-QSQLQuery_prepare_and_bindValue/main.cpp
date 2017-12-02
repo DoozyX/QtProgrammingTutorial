@@ -1,11 +1,9 @@
 #include <QCoreApplication>
 #include <QtSql>
 #include <QDebug>
-
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-
     QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
 
     db.setConnectOptions();

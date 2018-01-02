@@ -38,6 +38,35 @@ void Dialog::read_model() {
 	}
 }
 
+void check_string(QString& temp, const QChar character) {
+    QStandardItem* item;
+    if (j == 0) {
+        QString str = temp.simplified();
+        str.replace(" ", "");
+        const QString path = QString(":/countries/flags/resources/countries/flags/%1.jpg").arg(str);
+        item = new QStandardItem();
+        item->setData(QIcon(path), Qt::DecorationRole);
+    } else if (j == 1) {
+        auto str = temp.simplified();
+        str.replace(" ", "");
+        item = new QStandardItem("+" + str);
+    } else {
+        item = new QStandardItem(temp);
+    }
+
+    ++j;
+    standardItemList.append(item);
+
+
+    if (character != QChar(',')) {
+        model->appendRow(standardItemList);
+        j = 0;
+        standardItemList.clear();
+    }
+
+    temp.clear();
+}
+
 void Dialog::check_string(QString& temp, const QChar character) {
 	QStandardItem* item;
 	if (j == 0) {

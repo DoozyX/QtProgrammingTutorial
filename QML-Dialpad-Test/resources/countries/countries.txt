@@ -1,0 +1,264 @@
+   2, 93   , Afghanistan             , AF             
+   3, 1907 , Alaska                  , AK             
+   4, 355  , Albania                 , AL             
+   5, 213  , Algeria                 , DZ             
+   6, 684  , American Samoa          , AS             
+   7, 376  , Andorra                 , AD             
+   8, 244  , Angola                  , AO             
+   9, 1264 , Anguilla                , AI             
+  10, 672  , Antarctica              , ANUS           
+  11, 1268 , Antigua & Barbuda       , AG             
+  12, 54   , Argentina               , AR             
+  14, 374  , Armenia                 , AM             
+  15, 297  , Aruba                   , AW             
+  16, 247  , Ascension Islands       , ASIS           
+  19, 61   , Australia               , AU             
+  21, 43   , Austria                 , AT             
+  22, 994  , Azerbaijan              , AZ             
+  23, 1242 , Bahamas                 , BS             
+  24, 973  , Bahrain                 , BH             
+  25, 880  , Bangladesh              , BD             
+  30, 1246 , Barbados                , BB             
+  31, 375  , Belarus                 , BY             
+  32, 32   , Belgium                 , BE             
+  33, 501  , Belize                  , BZ             
+  34, 229  , Benin                   , BJ             
+  35, 1441 , Bermuda                 , BM             
+  36, 975  , Bhutan                  , BT             
+  37, 591  , Bolivia                 , BO             
+  41, 387  , Bosnia - Herzegovina    , BA             
+  42, 267  , Botswana                , BW             
+  43, 55   , Brazil                  , BR             
+  46, 1284 , British Virgin Is.      , VG             
+  47, 673  , Brunei                  , BN             
+  48, 359  , Bulgaria                , BG             
+  50, 226  , Burkina Faso            , BF             
+  51, 257  , Burundi                 , BI             
+  52, 855  , Cambodia                , KH             
+  53, 237  , Cameroon                , CM             
+  55, 1000 , Canada                  , CA
+  55, 1204 , Canada                  , CA
+  55, 1226 , Canada                  , CA
+  55, 1249 , Canada                  , CA
+  55, 1250 , Canada                  , CA
+  55, 1289 , Canada                  , CA
+  55, 1306 , Canada                  , CA
+  55, 1343 , Canada                  , CA
+  55, 1403 , Canada                  , CA
+  55, 1416 , Canada                  , CA
+  55, 1418 , Canada                  , CA
+  55, 1438 , Canada                  , CA
+  55, 1450 , Canada                  , CA
+  55, 1506 , Canada                  , CA
+  55, 1514 , Canada                  , CA
+  55, 1519 , Canada                  , CA
+  55, 1579 , Canada                  , CA
+  55, 1581 , Canada                  , CA
+  55, 1587 , Canada                  , CA
+  55, 1604 , Canada                  , CA
+  55, 1613 , Canada                  , CA
+  55, 1647 , Canada                  , CA
+  55, 1705 , Canada                  , CA
+  55, 1709 , Canada                  , CA
+  55, 1778 , Canada                  , CA
+  55, 1780 , Canada                  , CA
+  55, 1807 , Canada                  , CA
+  55, 1819 , Canada                  , CA
+  55, 1867 , Canada                  , CA
+  55, 1902 , Canada                  , CA
+  55, 1905 , Canada                  , CA
+  57, 238  , Cape Verde              , CV             
+  58, 1345 , Cayman Islands          , KY             
+  59, 236  , Central African Republic, CF             
+  60, 235  , Chad Republic           , TD             
+  61, 56   , Chile                   , CL             
+  63, 86   , China                   , CN             
+  68, 614  , Christmas & Cocos       , CX             
+  70, 57   , Colombia                , CO             
+  73, 269  , Comoros                 , KM             
+  74, 242  , Congo                   , CG             
+  75, 682  , Cook Islands            , CK             
+  76, 506  , Costa Rica              , CR             
+  77, 385  , Croatia                 , HR             
+  78, 53   , Cuba                    , CU             
+  80, 357  , Cyprus                  , CY             
+  81, 420  , Czech Republic          , CZ             
+ 302, 243  , Dem. Rep. of Congo      , CD             
+  83, 45   , Denmark                 , DK             
+  84, 246  , Diego Garcia            , DGGR           
+  85, 253  , Djibouti                , DJ             
+  86, 1767 , Dominica                , DM             
+  87, 1809 , Dominican Republic      , DO             
+ 675, 670  , East Timor              , TP             
+  88, 593  , Ecuador                 , EC             
+  90, 20   , Egypt                   , EG             
+  92, 503  , El Salvador             , SV             
+  93, 240  , Equatorial Guinea       , GQ             
+  94, 291  , Eritrea                 , ER             
+  95, 372  , Estonia                 , EE             
+  96, 251  , Ethiopia                , ET             
+  97, 298  , Faeroe Islands          , FO             
+  98, 500  , Falkland Islands        , FK             
+  99, 679  , Fiji                    , FJ             
+ 100, 358  , Finland                 , FI             
+ 101, 33   , France                  , FR             
+ 102, 596  , French Antilles         , FRAN           
+ 103, 594  , French Guiana           , GF             
+ 104, 689  , French Polynesia        , PF             
+ 105, 241  , Gabon                   , GA             
+ 106, 220  , Gambia                  , GM             
+ 107, 995  , Georgia                 , GE             
+ 108, 49   , Germany                 , DE             
+ 109, 233  , Ghana                   , GH             
+ 111, 350  , Gibraltar               , GI             
+ 112, 30   , Greece                  , GR             
+ 115, 299  , Greenland               , GL             
+ 116, 1473 , Grenada                 , GD             
+ 117, 590  , Guadeloupe              , GP             
+ 118, 1671 , Guam                    , GU             
+ 119, 502  , Guatemala               , GT             
+ 120, 224  , Guinea                  , GN             
+ 121, 245  , Guinea Bissau           , GW             
+ 122, 592  , Guyana                  , GY             
+ 123, 509  , Haiti                   , HT             
+ 124, 1808 , Hawaii                  , HI             
+ 125, 504  , Honduras                , HN             
+ 126, 852  , Hong Kong               , HK             
+ 127, 36   , Hungary                 , HU             
+ 128, 354  , Iceland                 , IS             
+ 129, 91   , India                   , IN             
+ 136, 62   , Indonesia               , ID             
+ 138, 98   , Iran                    , IR             
+ 139, 964  , Iraq                    , IQ             
+ 140, 353  , Ireland                 , IE             
+ 142, 972  , Israel                  , IL             
+ 143, 39   , Italy                   , IT             
+ 144, 225  , Ivory Coast             , CI             
+ 145, 1876 , Jamaica                 , JM             
+ 146, 81   , Japan                   , JP             
+ 147, 962  , Jordan                  , JO             
+ 149, 733  , Kazakhstan              , KZ             
+ 150, 254  , Kenya                   , KE             
+ 152, 686  , Kiribati                , KI             
+ 153, 850  , Korea North             , KP             
+ 154, 82   , Korea South             , KR             
+ 155, 965  , Kuwait                  , KW             
+ 156, 996  , Kyrgyzstan              , KG             
+ 157, 856  , Laos                    , LA             
+ 158, 371  , Latvia                  , LV             
+ 159, 961  , Lebanon                 , LB             
+ 160, 266  , Lesotho                 , LS             
+ 161, 231  , Liberia                 , LR             
+ 162, 218  , Libya                   , LY             
+ 163, 423  , Liechtenstein           , LI             
+ 164, 370  , Lithuania               , LT             
+ 165, 352  , Luxembourg              , LU             
+ 166, 853  , Macau                   , MO             
+ 167, 389  , Macedonia               , MK             
+ 168, 261  , Madagascar              , MG             
+ 170, 265  , Malawi                  , MW             
+ 171, 60   , Malaysia                , MY             
+ 173, 960  , Maldives                , MV             
+ 174, 223  , Mali                    , ML             
+ 175, 356  , Malta                   , MT             
+ 176, 1670 , Mariana Islands         , MP             
+ 177, 692  , Marshall Islands        , MH             
+ 179, 222  , Mauritania              , MR             
+ 180, 230  , Mauritius               , MU             
+ 181, 2696 , Mayotte                 , YT             
+ 182, 52   , Mexico                  , MX             
+ 192, 691  , Micronesia              , FM             
+ 193, 373  , Moldova                 , MD             
+ 194, 377  , Monaco                  , MC             
+ 195, 976  , Mongolia                , MN             
+ 830, 382  , Montenegro              , ME             
+ 196, 1664 , Montserrat              , MS             
+ 197, 212  , Morocco                 , MA             
+ 198, 258  , Mozambique              , MZ             
+ 199, 95   , Myanmar                 , MM             
+ 200, 264  , Namibia                 , NA             
+ 201, 674  , Nauru                   , NR             
+ 202, 977  , Nepal                   , NP             
+ 203, 31   , Netherlands             , NL             
+ 204, 599  , Netherlands Antilles    , AN             
+ 206, 687  , New Caledonia           , NC             
+ 207, 64   , New Zealand             , NZ             
+ 208, 505  , Nicaragua               , NI             
+ 209, 227  , Niger                   , NE             
+ 210, 234  , Nigeria                 , NG             
+ 212, 683  , Niue Island             , NU             
+ 213, 6723 , Norfolk Islands         , NF             
+ 214, 47   , Norway                  , NO             
+ 215, 968  , Oman                    , OM             
+ 217, 92   , Pakistan                , PK             
+ 220, 680  , Palau                   , PW             
+ 703, 970  , Palestine               , PLIR           
+ 221, 507  , Panama                  , PA             
+ 222, 675  , Papua New Guinea        , PG             
+ 223, 595  , Paraguay                , PY             
+ 225, 51   , Peru                    , PE             
+ 227, 63   , Philippines             , PH             
+ 229, 48   , Poland                  , PL             
+ 231, 351  , Portugal                , PT             
+ 232, 1787 , Puerto Rico             , PR             
+ 233, 974  , Qatar                   , QA             
+ 234, 262  , Reunion Island          , RE             
+ 235, 40   , Romania                 , RO             
+ 237, 7    , Russia                  , RU             
+ 240, 250  , Rwanda                  , RW             
+ 242, 378  , San Marino              , SM             
+ 243, 239  , Sao Tome & Principe     , ST             
+ 244, 966  , Saudi Arabia            , SA             
+ 245, 221  , Senegal                 , SN             
+ 800, 381  , Serbia                  , CS             
+ 247, 248  , Seychelles              , SC             
+ 248, 232  , Sierra Leone            , SL             
+ 249, 65   , Singapore               , SG             
+ 250, 421  , Slovakia                , SK             
+ 251, 386  , Slovenia                , SI             
+ 252, 677  , Solomon Islands         , SB             
+ 253, 252  , Somalia                 , SO             
+ 254, 27   , South Africa            , ZA             
+ 256, 34   , Spain                   , ES             
+ 257, 94   , Sri Lanka               , LK             
+ 258, 290  , St. Helena              , SH             
+ 259, 1869 , St. Kitts & Nevis       , KN             
+ 260, 1758 , St. Lucia               , LC             
+ 261, 508  , St. Pierre & Miquelon   , PM             
+ 262, 1784 , St. Vincent & Grenadines, VC             
+ 263, 249  , Sudan                   , SD             
+ 264, 597  , Suriname                , SR             
+ 265, 268  , Swaziland               , SZ             
+ 266, 46   , Sweden                  , SE             
+ 267, 41   , Switzerland             , CH             
+ 268, 963  , Syria                   , SY             
+ 269, 886  , Taiwan                  , TW             
+ 271, 992  , Tajikistan              , TJ             
+ 272, 255  , Tanzania                , TZ             
+ 274, 66   , Thailand                , TH             
+ 276, 228  , Togo                    , TG             
+ 277, 690  , Tokelau                 , TK             
+ 278, 676  , Tonga                   , TO             
+ 279, 1868 , Trinidad & Tobago       , TT             
+ 280, 216  , Tunisia                 , TN             
+ 281, 90   , Turkey                  , TR             
+ 283, 993  , Turkmenistan            , TM             
+ 284, 1649 , Turks & Caicos Islands  , TC             
+ 285, 688  , Tuvalu                  , TV             
+ 286, 256  , Uganda                  , UG             
+ 287, 380  , Ukraine                 , UA             
+ 288, 971  , United Arab Emirates    , AE             
+ 289, 44   , United Kingdom          , UK             
+ 290, 598  , Uruguay                 , UY             
+   1, 1    , USA                     , US             
+ 291, 1340 , U.S. Virgin Islands     , VI             
+ 292, 998  , Uzbekistan              , UZ             
+ 293, 678  , Vanuatu                 , VU             
+ 294, 379  , Vatican City            , VA             
+ 295, 58   , Venezuela               , VE             
+ 297, 84   , Vietnam                 , VN             
+ 298, 681  , Wallis & Futuna         , WF             
+ 299, 685  , Western Samoa           , WS             
+ 300, 967  , Yemen                   , YE             
+ 303, 260  , Zambia                  , ZM             
+ 305, 263  , Zimbabwe                , ZW             

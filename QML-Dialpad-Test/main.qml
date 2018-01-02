@@ -68,53 +68,134 @@ Window {
             height: 50
             color: "transparent"
 
-
-            Rectangle {
-                id: phoneInput
-                width: btnCountry.width + textField.width
-                height: 50
-                border.width: 1
+            Row {
+                width: parent.width
+                height: parent.height
+                spacing: 5
                 Rectangle {
-                    id: btnCountry
-                    anchors.left: parent.left + 5
-                    width: 40
+                    id: phoneInput
+                    width: parent.width - 90//btnSend.width
+                    height: parent.height
+                    BorderImage {
+                        id: phoneInputImage
+                        source: "qrc:/resources/field_normal.png"
+                        anchors.fill: parent
+                    }
+
+                    Row {
+                        width: parent.width
+                        height: parent.height
+                        spacing: 10
+
+
+                        Rectangle {
+                            id: btnCountry
+                            width: 40
+                            height: parent.height
+
+                            color: "transparent"
+
+                            Image {
+                                id: flagImg
+                                source: "qrc:/resources/countries/flags/1.jpg"
+                                x: 5
+                                y: parent.width/2.5
+                                width: 30
+                                height: 20
+                            }
+                            Image {
+                                id: arrowImg
+                                anchors.left: flagImg.right
+                                y: parent.width/2
+                                source: "qrc:/resources/combo_arrow.png"
+                                width: 10
+                                height: 10
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    popupCountrySelect.open()
+                                }
+                            }
+
+                        }
+
+                        Rectangle {
+                            id: inputPhone
+                            width: parent.width - btnCountry.width
+                            height: parent.height
+                            color: "transparent"
+
+                            TextInput {
+                                id: textField
+                                y: parent.height / 5
+                                text: qsTr("number")
+                                font.pixelSize: 19
+
+                                inputMask: "+00000000000"
+                                maximumLength: 11
+
+                                onTextChanged: {
+                                    flagImg.source = myModel.getFlagURLfromPhone(qsTr(text))
+                                }
+
+                                onFocusChanged: {
+                                    if (textField.focus) {
+                                        phoneInputImage.source = "qrc:/resources/field_focus.png"
+                                    } else {
+                                        phoneInputImage.source = "qrc:/resources/field_normal.png"
+                                    }
+
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+                Rectangle {
+                    id: btnSend
+                    width: 80
                     height: 50
-                    Image {
-                        id: flagImg
-                        source: "qrc:/resources/countries/flags/1.jpg"
-                        width: 30
-                        height: 20
-                        y: 15
+
+                    BorderImage {
+                        id: btnSendImage
+                        source: "qrc:/resources/btn_white_normal.png"
+                        anchors.fill: parent
                     }
-                    Image {
-                        id: arrowImg
-                        anchors.left: flagImg.right
-                        source: "qrc:/resources/combo_arrow.png"
-                        width: 10
-                        height: 10
-                        y: 20
+
+                    Text {
+                        id: a1233
+                        anchors.centerIn: parent
+                        font.pixelSize: 19
+                        color: "white"
+                        text: qsTr("Send")
                     }
+
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: {
-                            console.info("image clicked!")
+                        hoverEnabled: true
+                        onEntered: {
+                            console.log("Entered")
+                            btnSendImage.source = "qrc:/resources/btn_white_hover.png"
+                        }
+                        onExited: {
+                            console.log("Exited")
+                            btnSendImage.source = "qrc:/resources/btn_white_normal.png"
+                        }
+                        onPressed: {
+                            console.log("Pressed")
+                            btnSendImage.source = "qrc:/resources/btn_white_down.png"
+                        }
+
+                        onReleased: {
+                            console.log("Released")
+                            btnSendImage.source = "qrc:/resources/btn_white_hover.png"
                         }
                     }
+
                 }
 
-                TextField {
-                    id: textField
-                    width: parent.width - btnCountry - btnSend.width - 30
-                    anchors.left: btnCountry.right
-                    x: 50
-                    text: qsTr("number")
-                }
-            }
-
-            Button {
-                id: btnSend
-                x: parent.width - btnSend.width - 8
-                text: qsTr("Send")
             }
         }
 
@@ -124,10 +205,19 @@ Window {
             width: parent.width
             height: parent.height - credits.height - phone.height - 100
             border.width: 1
-
-            TextArea {
-                id: messagetext
+            ScrollView {
+                id: view
                 anchors.fill: parent
+
+                TextArea {
+                    id: messageText
+                    wrapMode: TextArea.Wrap
+                    onTextChanged: {
+                        var n = messageText.length
+                        messagesCount.text =  parseInt(n / 160 + 1)
+                        messageLetters.text = 160 - (n % 160)
+                    }
+                }
             }
         }
 
@@ -194,7 +284,7 @@ Window {
     }
 
     Popup {
-        id: countrySelect
+        id: popupCountrySelect
         x: 10
         y: 60
         width: parent.width - 20
@@ -202,49 +292,79 @@ Window {
         modal: true
         focus: true
 
-        ListView {
-            id: listView
-            anchors.fill: parent
-            contentWidth: parent.width
 
-            //contentWidth: headerItem.width
-            //flickableDirection: Flickable.HorizontalAndVerticalFlick
-            model: myModel
+        Component {
+            id: listRow
+            Item {
+                id: ads
+                width: popupCountrySelect.width
+                height: 20
+                Row {
+                    id: countryRow
+                    width: popupCountrySelect.width
+                    clip: true
+                    spacing: 5
+                    Rectangle {
+                        id: boxCountryFlag
+                        width:25
+                        height:20
+                        color: "transparent"
+                        Image {
+                            anchors.fill: parent
+                            source: flagURL
+                        }
+                    }
 
-            delegate: Rectangle {
-                id: root
-                width: parent.width
-                height: 30
+                    Rectangle {
+                        id: boxCountryName
+                        width:countryRow.width - boxCountryCode.width - boxCountryFlag.width - 20
+                        height:20
+                        color: "transparent"
+                        property alias text: txtCountryName.text
+                        Text {
+                            id: txtCountryName
+                            anchors.fill: parent
+                            text: countryName
+                        }
+                    }
+                    Rectangle {
+                        id: boxCountryCode
+                        width:50
+                        height:20
+                        color: "transparent"
 
-                //                        Image {
-                //                            id: image
-
-                //                            source: decoration
-                //                            fillMode: Image.PreserveAspectFit
-                //                            height: parent.height
-                //                        }
-
-                Text {
-                    //text: nameRole
-                    text: display
-                    //verticalAlignment: Text.AlignVCenter
-                    //anchors.verticalCenter: image.verticalCenter
+                        Text {
+                            anchors.fill: parent
+                            text: countryCode
+                        }
+                    }
                 }
-
-                //                        MouseArea {
-                //                            anchors.fill: parent
-
-                //                            onClicked: {
-
-                //                                console.log("current index is " + index );
-
-                //                                root.ListView.view.currentIndex = index
-                //                                root.forceActiveFocus()
-                //                            }
-                //                        }
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        flagImg.source = myModel.getFlagURLfromIndex(index)
+                        textField.text = myModel.getPhoneFromIndex(index)
+                        lvCountries.currentIndex = index
+                        popupCountrySelect.close()
+                    }
+                }
             }
-            //ScrollIndicator.horizontal: ScrollIndicator { }
-            ScrollIndicator.vertical: ScrollIndicator { }
+        }
+
+
+        ListView {
+            id: lvCountries
+            model: myModel
+            delegate: listRow
+            anchors.fill: parent
+            interactive: true
+            clip: true
+            highlight: Rectangle {
+                color: '#cccccc'
+            }
+            focus: true
+            ScrollBar.vertical: ScrollBar {}
+            //onCurrentItemChanged: console.log(lvCountries.currentIndex + ' selected')
         }
     }
 }

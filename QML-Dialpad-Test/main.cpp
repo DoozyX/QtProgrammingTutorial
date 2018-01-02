@@ -8,11 +8,11 @@
 #include <qqml.h>
 #include <QtQuick/qquickitem.h>
 #include <QtQuick/qquickview.h>
+#include "mymodel.h"
 
 
 QStandardItemModel* modelFromCSV() {
-    QStandardItem* item;
-    QStandardItemModel *model = new QStandardItemModel();
+    MyModel *model = new MyModel();
     QList<QStandardItem*> standardItemList;
     int j = 0;
     // file operations
@@ -33,17 +33,20 @@ QStandardItemModel* modelFromCSV() {
             }
             // for each loop to iterate over containers
             j = 0;
-            foreach(const QString& cell, line.split(",")) {
+            QStandardItem *item;
+            foreach(const QString& cell, line.split(",")) {                
                 if (j == 0) {
+                    item = new QStandardItem("Country");
                     const QString path = QString("qrc:/resources/countries/flags/%1.jpg").arg(cell.trimmed());
-                    item = new QStandardItem();
-                    item->setData(QIcon(path), Qt::DecorationRole);
+                    item->setData(path, Qt::UserRole + 1);
                 } else if (j == 1) {
-                    item = new QStandardItem("+" + cell.trimmed());
+                    item->setData(QString("+" + cell.trimmed()), Qt::UserRole + 2);
+                } else if (j == 2){
+                    item->setData(cell.trimmed(), Qt::UserRole + 3);
                 } else {
-                    item = new QStandardItem(cell.trimmed());
+                    standardItemList << item;
                 }
-                standardItemList.append(item);
+
                 ++j;
             }
             model->appendRow(standardItemList);

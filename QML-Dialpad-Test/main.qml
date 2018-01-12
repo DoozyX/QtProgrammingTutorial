@@ -7,7 +7,6 @@ Window {
     width: 400
     height: 400
 
-
     Image {
         source: "qrc:/resources/bgd_roster_gradient.png"
         anchors.fill: parent
